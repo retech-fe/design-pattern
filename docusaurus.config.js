@@ -37,7 +37,9 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/retech-fe/design-pattern/',
+            'https://github.com/retech-fe/design-pattern/blob/main/',
+          showLastUpdateTime: true,
+          showLastUpdateAuthor: true
         },
         blog: false,
         theme: {
@@ -66,7 +68,7 @@ const config = {
       },
       footer: {
         style: 'dark',
-        copyright: `Copyright © ${new Date().getFullYear()} Design Pattern, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Design Pattern, Re:Tech FE.`,
       },
       docs: {
         sidebar: {
