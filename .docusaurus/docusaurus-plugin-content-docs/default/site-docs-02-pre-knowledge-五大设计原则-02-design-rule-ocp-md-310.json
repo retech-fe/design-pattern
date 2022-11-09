@@ -1,0 +1,36 @@
+{
+  "unversionedId": "pre-knowledge/五大设计原则/design-rule-ocp",
+  "id": "pre-knowledge/五大设计原则/design-rule-ocp",
+  "title": "开放封闭原则",
+  "description": "How do I find you when I cannot solve this problem",
+  "source": "@site/docs/02-pre-knowledge/五大设计原则/02-design-rule-ocp.md",
+  "sourceDirName": "02-pre-knowledge/五大设计原则",
+  "slug": "/pre-knowledge/五大设计原则/design-rule-ocp",
+  "permalink": "/design-pattern/docs/pre-knowledge/五大设计原则/design-rule-ocp",
+  "draft": false,
+  "editUrl": "https://github.com/retech-fe/design-pattern/blob/main/docs/02-pre-knowledge/五大设计原则/02-design-rule-ocp.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "pengfei.zuo",
+  "lastUpdatedAt": 1667923200,
+  "formattedLastUpdatedAt": "Nov 8, 2022",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "开放封闭原则",
+    "sidebar_label": "O 开放封闭原则",
+    "description": "How do I find you when I cannot solve this problem",
+    "last_update": {
+      "date": "11/09/2022",
+      "author": "pengfei.zuo"
+    }
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "S 单一职责原则",
+    "permalink": "/design-pattern/docs/pre-knowledge/五大设计原则/design-rule-srp"
+  },
+  "next": {
+    "title": "L 里氏替换原则",
+    "permalink": "/design-pattern/docs/pre-knowledge/五大设计原则/disign-rule-liskov"
+  }
+}

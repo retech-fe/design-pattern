@@ -1,0 +1,26 @@
+{
+  "unversionedId": "pre-knowledge/design-rule-dip copy",
+  "id": "pre-knowledge/design-rule-dip copy",
+  "title": "S 单一职责原则",
+  "description": "一. 什么是依赖倒置原则",
+  "source": "@site/docs/02-pre-knowledge/design-rule-dip copy.md",
+  "sourceDirName": "02-pre-knowledge",
+  "slug": "/pre-knowledge/design-rule-dip copy",
+  "permalink": "/design-pattern/docs/pre-knowledge/design-rule-dip copy",
+  "draft": false,
+  "editUrl": "https://github.com/retech-fe/design-pattern/blob/main/docs/02-pre-knowledge/design-rule-dip copy.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "S 单一职责原则"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "前置知识",
+    "permalink": "/design-pattern/docs/category/前置知识"
+  },
+  "next": {
+    "title": "设计原则之依赖倒置",
+    "permalink": "/design-pattern/docs/pre-knowledge/design-rule-dip"
+  }
+}

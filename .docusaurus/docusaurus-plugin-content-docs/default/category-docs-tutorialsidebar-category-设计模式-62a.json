@@ -1,0 +1,15 @@
+{
+  "title": "设计模式",
+  "slug": "/category/设计模式",
+  "permalink": "/docs/category/设计模式",
+  "navigation": {
+    "previous": {
+      "title": "Create a Blog Post",
+      "permalink": "/docs/pre-knowledge/create-a-blog-post"
+    },
+    "next": {
+      "title": "职责链模式：领导，我想请个假",
+      "permalink": "/docs/structural-pattern/zeren"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "unversionedId": "creational-pattern/manage-docs-versions",
+  "id": "creational-pattern/manage-docs-versions",
+  "title": "Manage Docs Versions",
+  "description": "Docusaurus can manage multiple versions of your docs.",
+  "source": "@site/docs/03-creational-pattern/manage-docs-versions.md",
+  "sourceDirName": "03-creational-pattern",
+  "slug": "/creational-pattern/manage-docs-versions",
+  "permalink": "/design-pattern/docs/creational-pattern/manage-docs-versions",
+  "draft": false,
+  "editUrl": "https://github.com/retech-fe/design-pattern/blob/main/docs/03-creational-pattern/manage-docs-versions.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "创建型模式",
+    "permalink": "/design-pattern/docs/category/创建型模式"
+  },
+  "next": {
+    "title": "Translate your site",
+    "permalink": "/design-pattern/docs/creational-pattern/translate-your-site"
+  }
+}

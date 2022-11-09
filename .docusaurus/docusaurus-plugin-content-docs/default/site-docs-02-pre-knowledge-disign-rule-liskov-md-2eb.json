@@ -1,0 +1,38 @@
+{
+  "unversionedId": "pre-knowledge/disign-rule-liskov",
+  "id": "pre-knowledge/disign-rule-liskov",
+  "title": "里氏替换原则",
+  "description": "How do I find you when I cannot solve this problem",
+  "source": "@site/docs/02-pre-knowledge/disign-rule-liskov.md",
+  "sourceDirName": "02-pre-knowledge",
+  "slug": "/pre-knowledge/disign-rule-liskov",
+  "permalink": "/design-pattern/docs/pre-knowledge/disign-rule-liskov",
+  "draft": false,
+  "editUrl": "https://github.com/retech-fe/design-pattern/blob/main/docs/02-pre-knowledge/disign-rule-liskov.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "pengfei.zuo",
+  "lastUpdatedAt": 1667923200,
+  "formattedLastUpdatedAt": "Nov 8, 2022",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "id": "disign-rule-liskov",
+    "title": "里氏替换原则",
+    "sidebar_label": "L 里氏替换原则",
+    "sidebar_position": 3,
+    "description": "How do I find you when I cannot solve this problem",
+    "last_update": {
+      "date": "11/09/2022",
+      "author": "pengfei.zuo"
+    }
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "O 开闭原则",
+    "permalink": "/design-pattern/docs/pre-knowledge/design-rule-ocp"
+  },
+  "next": {
+    "title": "D 依赖倒置原则",
+    "permalink": "/design-pattern/docs/pre-knowledge/design-rule-dip"
+  }
+}

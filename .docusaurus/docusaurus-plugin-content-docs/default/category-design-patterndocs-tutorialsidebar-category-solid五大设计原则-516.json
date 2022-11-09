@@ -1,0 +1,15 @@
+{
+  "title": "SOLID五大设计原则",
+  "slug": "/category/solid五大设计原则",
+  "permalink": "/design-pattern/docs/category/solid五大设计原则",
+  "navigation": {
+    "previous": {
+      "title": "前置知识",
+      "permalink": "/design-pattern/docs/category/前置知识"
+    },
+    "next": {
+      "title": "S 单一职责原则",
+      "permalink": "/design-pattern/docs/pre-knowledge/五大设计原则/design-rule-srp"
+    }
+  }
+}

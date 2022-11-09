@@ -1,0 +1,15 @@
+{
+  "title": "前置知识1",
+  "slug": "/category/前置知识1",
+  "permalink": "/design-pattern/docs/category/前置知识1",
+  "navigation": {
+    "previous": {
+      "title": "D 依赖倒置原则",
+      "permalink": "/design-pattern/docs/pre-knowledge/五大设计原则/design-rule-dip"
+    },
+    "next": {
+      "title": "test",
+      "permalink": "/design-pattern/docs/pre-knowledge/test/"
+    }
+  }
+}

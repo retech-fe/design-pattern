@@ -1,0 +1,15 @@
+{
+  "title": "创建型模式",
+  "slug": "/category/创建型模式",
+  "permalink": "/design-pattern/docs/category/创建型模式",
+  "navigation": {
+    "previous": {
+      "title": "职责链模式：领导，我想请个假",
+      "permalink": "/design-pattern/docs/structural-pattern/zeren"
+    },
+    "next": {
+      "title": "Manage Docs Versions",
+      "permalink": "/design-pattern/docs/creational-pattern/manage-docs-versions"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "unversionedId": "behavioral-pattern/zeren",
+  "id": "behavioral-pattern/zeren",
+  "title": "职责链模式：领导，我想请个假",
+  "description": "1. 你曾经见过的职责链模式",
+  "source": "@site/docs/05-behavioral-pattern/zeren.md",
+  "sourceDirName": "05-behavioral-pattern",
+  "slug": "/behavioral-pattern/zeren",
+  "permalink": "/design-pattern/docs/behavioral-pattern/zeren",
+  "draft": false,
+  "editUrl": "https://github.com/retech-fe/design-pattern/blob/main/docs/05-behavioral-pattern/zeren.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "行为型模式",
+    "permalink": "/design-pattern/docs/category/行为型模式"
+  }
+}

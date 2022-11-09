@@ -1,0 +1,118 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/design-pattern/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/design-pattern/docs",
+          "mainDocId": "intro",
+          "docs": [
+            {
+              "id": "behavioral-pattern/zeren",
+              "path": "/design-pattern/docs/behavioral-pattern/zeren",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "creational-pattern/manage-docs-versions",
+              "path": "/design-pattern/docs/creational-pattern/manage-docs-versions",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "creational-pattern/translate-your-site",
+              "path": "/design-pattern/docs/creational-pattern/translate-your-site",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "intro",
+              "path": "/design-pattern/docs/intro",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "pre-knowledge/五大设计原则/design-rule-dip",
+              "path": "/design-pattern/docs/pre-knowledge/五大设计原则/design-rule-dip",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "pre-knowledge/五大设计原则/design-rule-isp",
+              "path": "/design-pattern/docs/pre-knowledge/五大设计原则/design-rule-isp",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "pre-knowledge/五大设计原则/design-rule-ocp",
+              "path": "/design-pattern/docs/pre-knowledge/五大设计原则/design-rule-ocp",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "pre-knowledge/五大设计原则/design-rule-srp",
+              "path": "/design-pattern/docs/pre-knowledge/五大设计原则/design-rule-srp",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "pre-knowledge/五大设计原则/disign-rule-liskov",
+              "path": "/design-pattern/docs/pre-knowledge/五大设计原则/disign-rule-liskov",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "pre-knowledge/design-rule-lod",
+              "path": "/design-pattern/docs/pre-knowledge/design-rule-lod",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "pre-knowledge/test/test",
+              "path": "/design-pattern/docs/pre-knowledge/test/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "structural-pattern/zeren",
+              "path": "/design-pattern/docs/structural-pattern/zeren",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/前置知识",
+              "path": "/design-pattern/docs/category/前置知识",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/solid五大设计原则",
+              "path": "/design-pattern/docs/category/solid五大设计原则",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/前置知识1",
+              "path": "/design-pattern/docs/category/前置知识1",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/结构型模式",
+              "path": "/design-pattern/docs/category/结构型模式",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/创建型模式",
+              "path": "/design-pattern/docs/category/创建型模式",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/行为型模式",
+              "path": "/design-pattern/docs/category/行为型模式",
+              "sidebar": "tutorialSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/design-pattern/docs/intro",
+                "label": "intro"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

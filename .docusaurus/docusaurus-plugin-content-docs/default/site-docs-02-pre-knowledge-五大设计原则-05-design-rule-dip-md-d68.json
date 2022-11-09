@@ -1,0 +1,36 @@
+{
+  "unversionedId": "pre-knowledge/五大设计原则/design-rule-dip",
+  "id": "pre-knowledge/五大设计原则/design-rule-dip",
+  "title": "依赖倒置原则",
+  "description": "How do I find you when I cannot solve this problem",
+  "source": "@site/docs/02-pre-knowledge/五大设计原则/05-design-rule-dip.md",
+  "sourceDirName": "02-pre-knowledge/五大设计原则",
+  "slug": "/pre-knowledge/五大设计原则/design-rule-dip",
+  "permalink": "/design-pattern/docs/pre-knowledge/五大设计原则/design-rule-dip",
+  "draft": false,
+  "editUrl": "https://github.com/retech-fe/design-pattern/blob/main/docs/02-pre-knowledge/五大设计原则/05-design-rule-dip.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "pengfei.zuo",
+  "lastUpdatedAt": 1667923200,
+  "formattedLastUpdatedAt": "Nov 8, 2022",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "依赖倒置原则",
+    "sidebar_label": "D 依赖倒置原则",
+    "description": "How do I find you when I cannot solve this problem",
+    "last_update": {
+      "date": "11/09/2022",
+      "author": "pengfei.zuo"
+    }
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "I 接口隔离原则",
+    "permalink": "/design-pattern/docs/pre-knowledge/五大设计原则/design-rule-isp"
+  },
+  "next": {
+    "title": "前置知识1",
+    "permalink": "/design-pattern/docs/category/前置知识1"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "unversionedId": "pre-knowledge/design-rule-srp",
+  "id": "pre-knowledge/design-rule-srp",
+  "title": "单一职责原则",
+  "description": "How do I find you when I cannot solve this problem",
+  "source": "@site/docs/02-pre-knowledge/01-design-rule-srp copy.md",
+  "sourceDirName": "02-pre-knowledge",
+  "slug": "/pre-knowledge/design-rule-srp",
+  "permalink": "/design-pattern/docs/pre-knowledge/design-rule-srp",
+  "draft": false,
+  "editUrl": "https://github.com/retech-fe/design-pattern/blob/main/docs/02-pre-knowledge/01-design-rule-srp copy.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "pengfei.zuo",
+  "lastUpdatedAt": 1667923200,
+  "formattedLastUpdatedAt": "Nov 8, 2022",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "id": "design-rule-srp",
+    "title": "单一职责原则",
+    "sidebar_label": "S 单一职责原则",
+    "sidebar_position": 1,
+    "description": "How do I find you when I cannot solve this problem",
+    "last_update": {
+      "date": "11/09/2022",
+      "author": "pengfei.zuo"
+    }
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "前置知识",
+    "permalink": "/design-pattern/docs/category/前置知识"
+  },
+  "next": {
+    "title": "S 单一职责原则",
+    "permalink": "/design-pattern/docs/pre-knowledge/design-rule-srp"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "unversionedId": "pre-knowledge/create-a-blog-post",
+  "id": "pre-knowledge/create-a-blog-post",
+  "title": "Create a Blog Post",
+  "description": "Docusaurus creates a page for each blog post, but also a blog index page, a tag system, an RSS feed...",
+  "source": "@site/docs/02-pre-knowledge/create-a-blog-post.md",
+  "sourceDirName": "02-pre-knowledge",
+  "slug": "/pre-knowledge/create-a-blog-post",
+  "permalink": "/design-pattern/docs/pre-knowledge/create-a-blog-post",
+  "draft": false,
+  "editUrl": "https://github.com/retech-fe/design-pattern/blob/main/docs/02-pre-knowledge/create-a-blog-post.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "前置知识",
+    "permalink": "/design-pattern/docs/category/前置知识"
+  },
+  "next": {
+    "title": "设计原则之依赖倒置",
+    "permalink": "/design-pattern/docs/pre-knowledge/design-rule-dip"
+  }
+}

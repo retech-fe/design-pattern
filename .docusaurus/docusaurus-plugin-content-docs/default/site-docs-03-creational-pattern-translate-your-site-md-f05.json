@@ -1,0 +1,30 @@
+{
+  "unversionedId": "creational-pattern/translate-your-site",
+  "id": "creational-pattern/translate-your-site",
+  "title": "Translate your site",
+  "description": "Let's translate docs/intro.md to French.",
+  "source": "@site/docs/03-creational-pattern/translate-your-site.md",
+  "sourceDirName": "03-creational-pattern",
+  "slug": "/creational-pattern/translate-your-site",
+  "permalink": "/design-pattern/docs/creational-pattern/translate-your-site",
+  "draft": false,
+  "editUrl": "https://github.com/retech-fe/design-pattern/blob/main/docs/03-creational-pattern/translate-your-site.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Manage Docs Versions",
+    "permalink": "/design-pattern/docs/creational-pattern/manage-docs-versions"
+  },
+  "next": {
+    "title": "行为型模式",
+    "permalink": "/design-pattern/docs/category/行为型模式"
+  }
+}

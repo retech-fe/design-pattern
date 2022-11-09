@@ -1,0 +1,15 @@
+{
+  "title": "Tutorial - Extras",
+  "slug": "/category/tutorial---extras",
+  "permalink": "/docs/category/tutorial---extras",
+  "navigation": {
+    "previous": {
+      "title": "职责链模式：领导，我想请个假",
+      "permalink": "/docs/structural-pattern/zeren"
+    },
+    "next": {
+      "title": "Manage Docs Versions",
+      "permalink": "/docs/creational-pattern/manage-docs-versions"
+    }
+  }
+}

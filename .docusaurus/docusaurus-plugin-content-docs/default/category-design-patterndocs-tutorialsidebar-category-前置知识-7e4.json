@@ -1,0 +1,15 @@
+{
+  "title": "前置知识",
+  "slug": "/category/前置知识",
+  "permalink": "/design-pattern/docs/category/前置知识",
+  "navigation": {
+    "previous": {
+      "title": "序言",
+      "permalink": "/design-pattern/docs/intro"
+    },
+    "next": {
+      "title": "SOLID五大设计原则",
+      "permalink": "/design-pattern/docs/category/solid五大设计原则"
+    }
+  }
+}

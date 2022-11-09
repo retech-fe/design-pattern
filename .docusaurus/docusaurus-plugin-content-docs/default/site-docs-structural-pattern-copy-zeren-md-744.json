@@ -1,0 +1,27 @@
+{
+  "unversionedId": "structural-pattern copy/zeren",
+  "id": "structural-pattern copy/zeren",
+  "title": "职责链模式：领导，我想请个假",
+  "description": "1. 你曾经见过的职责链模式",
+  "source": "@site/docs/structural-pattern copy/zeren.md",
+  "sourceDirName": "structural-pattern copy",
+  "slug": "/structural-pattern copy/zeren",
+  "permalink": "/docs/structural-pattern copy/zeren",
+  "draft": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/structural-pattern copy/zeren.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "设计模式",
+    "permalink": "/docs/category/设计模式-1"
+  },
+  "next": {
+    "title": "Create a Blog Post",
+    "permalink": "/docs/pre-knowledge/create-a-blog-post"
+  }
+}

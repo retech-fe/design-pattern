@@ -1,0 +1,29 @@
+{
+  "unversionedId": "pre-knowledge/design-rule-lod",
+  "id": "pre-knowledge/design-rule-lod",
+  "title": "迪米特法则",
+  "description": "一. 什么是迪米特法则",
+  "source": "@site/docs/02-pre-knowledge/design-rule-lod.md",
+  "sourceDirName": "02-pre-knowledge",
+  "slug": "/pre-knowledge/design-rule-lod",
+  "permalink": "/design-pattern/docs/pre-knowledge/design-rule-lod",
+  "draft": false,
+  "editUrl": "https://github.com/retech-fe/design-pattern/blob/main/docs/02-pre-knowledge/design-rule-lod.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "迪米特法则"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "test",
+    "permalink": "/design-pattern/docs/pre-knowledge/test/"
+  },
+  "next": {
+    "title": "结构型模式",
+    "permalink": "/design-pattern/docs/category/结构型模式"
+  }
+}
