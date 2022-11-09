@@ -3,7 +3,7 @@
 
 ## 贡献指南
 
-[贡献指南](https://github.com/retech-fe/blog/blob/develop/Contribution.md)
+[贡献指南](https://github.com/retech-fe/design-pattern/blob/develop/Contribution.md)
 
 ## 图床
 
