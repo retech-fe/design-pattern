@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Design Pattern',
   tagline: '前端必懂的设计模式',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://retech-fe.github.io/design-pattern',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
