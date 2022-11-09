@@ -10,27 +10,25 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
+    title: '创建型模式',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        创建型模式在创建什么(What)，由谁创建(Who)，何时创建(When)等方面都为软件设计者提供了尽可能大的灵活性。创建型模式隐藏了类的实例的创建细节，通过隐藏对象如何被创建和组合在一起达到使整个系统独立的目的。
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: '结构型模式',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        结构型模式描述如何将类或者对象结合在一起形成更大的结构，就像搭积木，可以通过简单积木的组合形成复杂的、功能更为强大的结构。 结构型模式可以分为类结构型模式和对象结构型模式： 类结构型模式关心类的组合，由多个类可以组合成一个更大的系统。
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: '行为型模式',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
