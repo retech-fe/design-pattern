@@ -1,5 +1,9 @@
 ---
-sidebar_position: 7
+title: 桥接模式
+description: 使用组合关系代替继承关系，降低抽象和实现两个可变维度的耦合度
+last_update:
+  date: 11/09/2022
+  author: your name
 ---
 
 # 桥接模式

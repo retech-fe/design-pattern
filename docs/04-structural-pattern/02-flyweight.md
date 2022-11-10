@@ -1,5 +1,9 @@
 ---
-sidebar_position: 2
+title: 享元模式
+description: 运用共享技术来有效地支持大量细粒度对象的复用，以减少创建的对象的数量
+last_update:
+  date: 11/09/2022
+  author: your name
 ---
 
 # 享元模式

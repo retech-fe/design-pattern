@@ -1,5 +1,9 @@
 ---
-sidebar_position: 4
+title: 装饰者模式
+description: 在不改变原对象的基础上，通过对其添加属性或方法来进行包装拓展，使得原有对象可以动态具有更多功能
+last_update:
+  date: 11/09/2022
+  author: your name
 ---
 
 # 装饰者模式

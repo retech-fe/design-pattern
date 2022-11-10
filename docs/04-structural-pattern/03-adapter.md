@@ -1,5 +1,9 @@
 ---
-sidebar_position: 3
+title: 适配器模式
+description: 将一个类（对象）的接口（方法、属性）转化为用户需要的另一个接口，解决类（对象）之间接口不兼容的问题
+last_update:
+  date: 11/09/2022
+  author: your name
 ---
 
 # 适配器模式

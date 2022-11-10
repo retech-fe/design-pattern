@@ -1,5 +1,9 @@
 ---
-sidebar_position: 6
+title: 组合模式
+description: 将对象组合成树形结构来表现整体-部分层次结构
+last_update:
+  date: 11/09/2022
+  author: your name
 ---
 
 # 组合模式

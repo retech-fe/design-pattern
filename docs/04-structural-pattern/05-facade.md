@@ -1,5 +1,9 @@
 ---
-sidebar_position: 5
+title: 外观模式
+description: 定义一个将子系统的一组接口集成在一起的高层接口，以提供一个一致的外观
+last_update:
+  date: 11/09/2022
+  author: your name
 ---
 
 # 外观模式
