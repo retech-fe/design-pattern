@@ -1,6 +1,11 @@
 ---
-sidebar_position: 4
+title: 建造者模式
+description: 分步构建一个复杂对象，并允许按步骤构造
+last_update:
+  date: 11/09/2022
+  author: your name
 ---
+
 
 # 建造者模式
 

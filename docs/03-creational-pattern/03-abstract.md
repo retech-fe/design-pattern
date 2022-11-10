@@ -1,5 +1,9 @@
 ---
-sidebar_position: 3
+title: 抽象工厂模式
+description: 通过对类的工厂抽象使其业务用于对产品类簇的创建
+last_update:
+  date: 11/09/2022
+  author: your name
 ---
 
 # 抽象工厂模式

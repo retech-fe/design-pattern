@@ -1,6 +1,11 @@
 ---
-sidebar_position: 1
+title: 工厂模式
+description: 根据不同的输入返回不同类的实例
+last_update:
+  date: 11/09/2022
+  author: your name
 ---
+
 
 # 工厂模式
 

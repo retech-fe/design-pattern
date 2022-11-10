@@ -1,5 +1,9 @@
 ---
-sidebar_position: 1
+title: 单例模式
+description: 保证一个类只有一个实例
+last_update:
+  date: 11/09/2022
+  author: your name
 ---
 
 # 单例模式
