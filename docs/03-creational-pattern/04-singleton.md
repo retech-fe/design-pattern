@@ -233,7 +233,7 @@ console.log(w1 === w2) //true
 - 当一个类的实例化过程消耗的资源过多，可以使用单例模式来避免性能浪费；
 - 当项目中需要一个公共的状态，那么需要使用单例模式来保证访问一致性；
 
-### 4.1 **commonjs模块加载机制**
+### **4.1 commonjs模块加载机制**
 
 [HotModuleReplacement](https://github.com/webpack/webpack/blob/8070bcd333cd1d07ce13fe5e91530c80779d51c6/lib/hmr/HotModuleReplacement.runtime.js#L55)
 
@@ -272,7 +272,7 @@ console.log(w1 === w2) //true
 }
 ```
 
-### 4.2 **jQuery**
+### **4.2 jQuery**
 
 [jquery](https://code.jquery.com/jquery-3.4.1.js)
 
@@ -284,7 +284,7 @@ if(window.jQuery!=null){
 }
 ```
 
-### 4.3 **模态窗口**
+### **4.3 模态窗口**
 
 [bootstrap modal.js](https://github.com/twbs/bootstrap/blob/main/js/src/modal.js)
 
@@ -345,7 +345,7 @@ if(window.jQuery!=null){
 ```
 
 
-### 4.3 **store状态管理**
+### **4.3 store状态管理**
 
 [createStore](https://github.com/reduxjs/redux/blob/master/src/createStore.ts)
 
