@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Design Pattern',
-  tagline: '前端必懂的设计模式',
+  tagline: '面向前端工程师的设计模式',
   url: 'https://retech-fe.github.io',
   baseUrl: '/design-pattern',
   onBrokenLinks: 'throw',
@@ -55,7 +55,7 @@ const config = {
       navbar: {
         title: 'Design Pattern',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'Re:Tech FE',
           src: 'img/logo.svg',
         },
         items: [

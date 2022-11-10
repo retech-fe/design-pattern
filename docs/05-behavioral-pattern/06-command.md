@@ -1,5 +1,9 @@
 ---
-sidebar_position: 6
+title: 命令模式
+description: 将请求封装成对象，将命令的发送者和接受者解耦
+last_update:
+  date: 11/09/2022
+  author: your name
 ---
 
 # 命令模式：江湖通缉令

@@ -1,5 +1,9 @@
 ---
-sidebar_position: 7
+title: 职责链模式
+description: 一步操作可能分为多个职责角色来完成，把这些角色都分开，然后用一个链串起来
+last_update:
+  date: 11/09/2022
+  author: your name
 ---
 
 # 职责链模式：领导，我想请个假

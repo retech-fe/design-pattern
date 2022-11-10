@@ -1,5 +1,9 @@
 ---
-sidebar_position: 5
+title: 迭代器模式
+description: 无需知道对象内部结构就可以顺序地访问聚合对象内部的元素
+last_update:
+  date: 11/09/2022
+  author: your name
 ---
 
 # 迭代器模式：银行的点钞机

@@ -1,5 +1,9 @@
 ---
-sidebar_position: 3
+title: 状态模式
+description: 一个对象在其内部状态改变时改变它的行为
+last_update:
+  date: 11/09/2022
+  author: your name
 ---
 
 # 状态模式

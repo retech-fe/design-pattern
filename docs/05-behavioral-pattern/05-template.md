@@ -1,5 +1,10 @@
 ---
-sidebar_position: 4
+title: 模板方法模式
+sidebar_label: 模板方法模式(前端不常用)
+description: 父类中定义一组操作算法骨架，而将一些实现步骤延迟到子类中
+last_update:
+  date: 11/09/2022
+  author: your name
 ---
 
 # 模板方法模式：咖啡厅制作咖啡

@@ -1,5 +1,9 @@
 ---
-sidebar_position: 7
+title: 中介者模式
+description: 各对象不用显式地相互引用，将对象与对象之间紧密的耦合关系变得松散，从而可以独立地改变他们
+last_update:
+  date: 11/09/2022
+  author: your name
 ---
 
 # 中介者模式：找媒人介绍对象
