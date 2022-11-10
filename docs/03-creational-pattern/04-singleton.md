@@ -2,8 +2,8 @@
 title: 单例模式
 description: 保证一个类只有一个实例
 last_update:
-  date: 11/09/2022
-  author: your name
+  date: 11/10/2022
+  author: hongxiang.gao
 ---
 
 # 单例模式
@@ -232,3 +232,170 @@ console.log(w1 === w2) //true
 
 - 当一个类的实例化过程消耗的资源过多，可以使用单例模式来避免性能浪费；
 - 当项目中需要一个公共的状态，那么需要使用单例模式来保证访问一致性；
+
+### 4.1 commonjs模块加载机制
+
+(HotModuleReplacement)[https://github.com/webpack/webpack/blob/8070bcd333cd1d07ce13fe5e91530c80779d51c6/lib/hmr/HotModuleReplacement.runtime.js#L55]
+
+```js
+(function(modules) {
+  // webpack的启动函数
+  //模块的缓存
+  var installedModules = {};
+  //定义在浏览器中使用的require方法
+  function __webpack_require__(moduleId) {
+    //检查模块是否在缓存中
+    if (installedModules[moduleId]) {
+      return installedModules[moduleId].exports;
+    }
+    //创建一个新的模块并且放到模块的缓存中
+    var module = (installedModules[moduleId] = {
+      i: moduleId,
+      l: false,
+      exports: {}
+    });
+
+    //执行模块函数
+    modules[moduleId].call(
+      module.exports,
+      module,
+      module.exports,
+      __webpack_require__
+    );
+
+    //把模块设置为已经加载
+    module.l = true;
+
+    //返回模块的导出对象
+    return module.exports;
+  }
+}
+```
+
+### 4.2 jQuery
+
+[jquery](https://code.jquery.com/jquery-3.4.1.js)
+
+```js
+if(window.jQuery!=null){
+  return window.jQuery;
+}else{
+    //init~~~~~~~
+}
+```
+
+### 4.3 模态窗口
+
+[bootstrap modal.js](https://github.com/twbs/bootstrap/blob/main/js/src/modal.js)
+
+```js
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="show-button">显示模态窗口</button>
+    <button id="hide-button">隐藏模态窗口</button>
+    <script>
+        class Login {
+            constructor() {
+                this.element = document.createElement('div');
+                this.element.innerHTML = (
+                    `
+            用户名 <input type="text"/>
+            <button>登录</button>
+            `
+                );
+                this.element.style.cssText = 'width: 100px; height: 100px; position: absolute; left: 50%; top: 50%; display: block;';
+                document.body.appendChild(this.element);
+            }
+            show() {
+                this.element.style.display = 'block';
+            }
+            hide() {
+                this.element.style.display = 'none';
+            }
+        }
+        Login.getInstance = (function () {
+            let instance;
+            return function () {
+                if (!instance) {
+                    instance = new Login();
+                }
+                return instance;
+            }
+        })();
+
+        document.getElementById('show-button').addEventListener('click', function (event) {
+            Login.getInstance().show();
+        });
+        document.getElementById('hide-button').addEventListener('click', function (event) {
+            Login.getInstance().hide();
+        });
+    </script>
+</body>
+
+</html>
+```
+
+
+### 4.3 store状态管理
+
+[createStore](https://github.com/reduxjs/redux/blob/master/src/createStore.ts)
+
+```js
+function createStore(reducer: any) {
+    let state: any;
+    let listeners: any[] = [];
+    function getState() {
+        return state;
+    }
+    function dispatch(action: any) {
+        state = reducer(state, action);
+        listeners.forEach(l => l());
+    }
+    function subscribe(listener: any) {
+        listeners.push(listener);
+        return () => {
+            listeners = listeners.filter(item => item != listener);
+            console.log(listeners);
+        }
+    }
+    dispatch({});
+    return {
+        getState,
+        dispatch,
+        subscribe
+    }
+}
+let store = createStore((state: any, action: any) => state);
+```
+
+### 4.3 缓存
+
+```js
+let express = require('express');
+let fs = require('fs');
+let cache: Record<any, any> = {};
+let app = express();
+app.get('/user/:id', function (req: any, res: any) {
+    let id = req.params.id;
+    let user = cache.get(id);
+    if (user) {
+        res.json(user);
+    } else {
+        fs.readFile(`./users/${id}.json`, 'utf8', function (err: any, data: any) {
+            let user = JSON.parse(data);
+            cache.put(id, user);
+            res.json(user);
+        });
+    }
+});
+app.listen(3000);
+```
