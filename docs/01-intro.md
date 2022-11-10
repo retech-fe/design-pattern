@@ -6,7 +6,7 @@ sidebar_position: 1
 
 软件模式是将模式的一般概念应用于软件开发领域，即软件开发的 总体指导思路或参照样板。软件模式并非仅限于设计模式，还包括 架构模式、分析模式和过程模式等，实际上，在软件生存期的每一 个阶段都存在着一些被认同的模式。
 
-本书使用图形和代码结合的方式来解析设计模式；
+本小册使用图形和代码结合的方式来解析设计模式；
 
 每个模式都有相应的对象结构图，同时为了展示对象间的交互细节， 我会用到时序图来介绍其如何运行；（在状态模式中， 还会用到状态图，这种图的使用对于理解状态的转换非常直观）
 
@@ -25,11 +25,12 @@ sidebar_position: 1
   + 附录
 
 + 创建型模式
-  + 简单工厂模式( Simple Factory Pattern )
+  + [简单工厂模式(Simple Factory Pattern)](/docs/creational-pattern/factory)
   + 工厂方法模式(Factory Method Pattern)
   + 抽象工厂模式(Abstract Factory)
   + 建造者模式
-  + 单例模式
+  + [单例模式](/docs/creational-pattern/singleton)
+  + 原型模式
  
 + 结构型模式
   + 适配器模式
