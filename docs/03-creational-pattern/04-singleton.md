@@ -37,8 +37,10 @@ last_update:
 ```ts
 class Window {
   // 存储单例
+  // private修饰符保证在类外面不能访问
   private static instance: Window
 
+  // 静态方法保证通过类名能直接访问到该方法，不用new
   public static getInstance() {
     // 判断是否已经有单例了
     if (!Window.instance) {
@@ -56,21 +58,26 @@ console.log(w1 === w2) //true
 
 > ES5 方式同理
 
-```ts
+```js
 function Window() {}
 Window.prototype.hello = function () {
   console.log("hello")
 }
+
+// 立即执行函数；属性方法，不是原型方法，不用new
 Window.getInstance = (function () {
+  // 上层作用域缓存单例实例
   let window: Window
-  // 判断是否已经有单例了
+   // 闭包访问外部作用域中的实例变量
   return function () {
+    // 判断是否已经有单例了
     if (!window) {
       window = new (Window as any)()
     }
     return window
   }
 })()
+// 缺点：必须要告诉使用者通过getInstance方法得到单例
 let w1 = Window.getInstance()
 let w2 = Window.getInstance()
 console.log(w1 === w2) //true
@@ -78,27 +85,27 @@ console.log(w1 === w2) //true
 
 ### **2.2 初步优化——透明单例**
 
-上面的实现没有问题，也可以正常运行，但是这种使用方式有缺点，就是说必须要告诉 使用者通过`getInstance`方法得到单例
+上面的实现没有问题，也可以正常运行，但是这种使用方式有缺点，就是说必须要告诉使用者通过`getInstance`方法得到单例
 
 **特点**
 
 - 客户端或者说使用者并不需要知道要按单例使用
 
-```ts
+```js
 let Window = (function () {
-  let window: Window
-  let WindowInstance = function (this: Window) {
+  let window
+  let WindowInstance = function () {
     if (window) {
       return window
     } else {
-      //如果说构造函数返回一个对象的话。
+      //如果说构造函数返回一个对象的话,this就是创建的对象
       return (window = this)
     }
   }
   return WindowInstance
 })()
-let w1 = new (Window as any)()
-let w2 = new (Window as any)()
+let w1 = new Window()
+let w2 = new Window()
 console.log(w1 === w2) //ture
 ```
 
@@ -308,9 +315,9 @@ if(window.jQuery!=null){
                 this.element = document.createElement('div');
                 this.element.innerHTML = (
                     `
-            用户名 <input type="text"/>
-            <button>登录</button>
-            `
+                      用户名 <input type="text"/>
+                      <button>登录</button>
+                    `
                 );
                 this.element.style.cssText = 'width: 100px; height: 100px; position: absolute; left: 50%; top: 50%; display: block;';
                 document.body.appendChild(this.element);
@@ -322,6 +329,7 @@ if(window.jQuery!=null){
                 this.element.style.display = 'none';
             }
         }
+        // 模态窗口显示和隐藏没必须每次都重新创建，创建的开销很大
         Login.getInstance = (function () {
             let instance;
             return function () {
@@ -350,6 +358,8 @@ if(window.jQuery!=null){
 [createStore](https://github.com/reduxjs/redux/blob/master/src/createStore.ts)
 
 ```js
+// redux应用里，只会有一个仓库，他是单例的
+// 为了实现组件可以通信，仓库必须是单例的，只有一个
 function createStore(reducer: any) {
     let state: any;
     let listeners: any[] = [];
