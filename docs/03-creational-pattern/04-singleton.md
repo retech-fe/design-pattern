@@ -409,3 +409,119 @@ app.get('/user/:id', function (req: any, res: any) {
 });
 app.listen(3000);
 ```
+
+### **4.4 命名空间**
+
++ 用户编写的代码与内部的类/函数/常量或第三方类/函数/常量之间的名字冲突。
++ 为很长的标识符名称创建一个别名（或简短）的名称，提高源代码的可读性。
+
+ jQuery
+
+ ```js
+ let $ = {
+  ajax(){},
+  get(){},
+  post(){}
+}
+ ```
+```js
+let utils={};
+utils.def=function (namespace,fn) {
+    let namespaces=namespace.split('.');
+    let fnName=namespaces.pop();
+    let current=utils;
+    for (let i=0;i<namespaces.length;i++){
+        let namespace=namespaces[i];
+        if (!current[namespace]) {
+            current[namespace]={};
+        }
+        current=current[namespace];
+    }
+    current[fnName]=fn;
+}
+utils.def('dom.attr',function (key) {
+    console.log('dom.attr');
+});
+utils.def('dom.html',function (html) {
+    console.log('dom.html');
+});
+utils.def('string.trim',function () {
+    console.log('string.trim');
+});
+utils.dom.attr('src');
+utils.string.trim(' aaa ');
+```
+
+### **4.5 LRU缓存 **
+
+[lru-cache](https://leetcode.com/problems/lru-cache/)
+
+为`LRU Cache`设计一个数据结构，它支持两个操作：
++ 1）`get(key)`：如果`key`在`cache`中，则返回对应的`value`值，否则返回-1
++ 2）`set(key,value)`:如果`key`不在`cache`中，则将该`(key,value)`插入`cache`中（注意，如果`cache`已满，则必须把最近最久未使用的元素从`cache`中删除）；如果`key`在`cache`中，则重置`value`的值。
+
+```js
+/**
+- 用一个数组来存储数据，给每一个数据项标记一个访问时间戳
+- 每次插入新数据项的时候，先把数组中存在的数据项的时间戳自增,并将新数据项的时间戳置为0并插入到数组中
+- 每次访问数组中的数据项的时候，将被访问的数据项的时间戳置为0。
+- 当数组空间已满时，将时间戳最大的数据项淘汰。
+*/
+class LRUCache{
+    constructor(capacity) {
+        this.capacity=capacity;
+        this.members=[];
+    }
+    put(key,value) {
+        let found=false;
+        let oldestIndex=-1;
+        let oldestAge=-1;
+        for (let i=0;i<this.members.length;i++){
+            let member=this.members[i];
+            if (member.age > oldestAge) {
+                oldestIndex=i;
+                oldestAge=member.age;
+            }
+            if (member.key==key) {
+                this.members[i]={key,value,age: 0};
+                found=true;
+            } else {
+                member++;
+            }
+        }
+        if (!found) {
+            if (this.members.length>=this.capacity) {
+                this.members.splice(oldestIndex,1);
+            }
+            this.members[this.members.length]={
+                key,
+                value,
+                age:0
+            }
+        }
+    }
+    get(key) {
+        for (let i=0;i<this.members.length;i++){
+            let member=this.members[i];
+            if (member.key==key) {
+                member.age=0;
+                return member.value;
+            }
+        }    
+        return -1;
+    }
+}
+
+let cache=new LRUCache(3);
+cache.put('1',1);
+cache.put('2',2);
+cache.put('3',3);
+console.log(cache.get('1'));
+console.log(cache.get('2'));
+console.log(cache.get('3'));
+cache.put('4',4);
+console.log(cache.get('1'));
+console.log(cache.get('4'));
+console.log(cache);
+```
+
