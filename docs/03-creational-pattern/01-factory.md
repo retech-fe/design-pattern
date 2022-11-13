@@ -9,7 +9,7 @@ last_update:
 # **工厂模式**
 ## **1. 介绍**
 
-工厂模式（`Factory Pattern`），根据不同的输入返回不同类的实例，一般用来创建同一类对象。工厂模式的主要思想是将对象的创建与对象的实现分离。
+工厂模式（`Factory Pattern`），根据不同的名称输入返回不同类的实例，一般用来创建同一类对象。工厂模式的主要思想是将对象的创建与对象的实现分离。
 
 ## **2. 生活中的示例**
 
@@ -262,8 +262,8 @@ console.log(Café.order('Cappuccino'));
 
 ### **5.3 改进**
 
-+ 上面 的方案虽然具体创建的工作交给工厂子类去做，抽象工厂也不在负责创建具体的产品；但是新增产品是还是需要添加`switch  case`
-+ 我们可以采用`map`的方案来做工厂的映射，这样新增产品改动就比较少
++ 上面的方案虽然具体创建的工作交给工厂子类去做，抽象工厂不在负责创建具体的产品；但是新增产品是还是需要添加`switch  case`。
++ 我们可以采用`Map`的方案来做工厂的映射，这样新增产品改动就比较少。
 
 ```js
 const settings={
@@ -272,9 +272,9 @@ const settings={
     'Cappuccino': CappuccinoFactory
 }
 
-console.log(new settings('Americano'). createCoffee());
-console.log(new settings('Latte'). createCoffee());
-console.log(new settings('Cappuccino'). createCoffee());
+console.log(new settings('Americano').createCoffee());
+console.log(new settings('Latte').createCoffee());
+console.log(new settings('Cappuccino').createCoffee());
 ```
 
 
@@ -285,13 +285,13 @@ console.log(new settings('Cappuccino'). createCoffee());
 
 ## 7. **工厂模式的优缺点**
 
-### **7.1 优点：**
+### **7.1 优点**
 
 良好的封装，代码结构清晰，访问者无需知道对象的创建流程，特别是创建比较复杂的情况下。
 扩展性优良，通过工厂方法隔离了用户和创建流程隔离，符合开放封闭原则。
 解耦了高层逻辑和底层产品类，符合最少知识原则，不需要的就不要去交流。
 
-### **7.2 缺点：**
+### **7.2 缺点**
 
 带来了额外的系统复杂度，增加了抽象性。
 
