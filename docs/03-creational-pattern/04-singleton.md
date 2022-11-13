@@ -3,7 +3,7 @@ title: 单例模式
 description: 保证一个类只有一个实例
 last_update:
   date: 11/10/2022
-  author: hongxiang.gao
+  author: nan.zhong
 ---
 
 # 单例模式
