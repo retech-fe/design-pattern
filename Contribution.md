@@ -1,6 +1,5 @@
 # 贡献指南
 
-本站点基于[docusaurus](https://docusaurus.io/)搭建
 
 ## 分支
 
@@ -29,3 +28,7 @@ My Document Markdown content
 ## 自动构建
 
 提交`main`分支后会自动触发[`github action`](https://github.com/retech-fe/design-pattern/actions)；如果构建失败请查看脚本中的错误信息进行修改
+
+## 感谢
+
+本站点基于[docusaurus](https://docusaurus.io/)搭建
