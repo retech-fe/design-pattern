@@ -390,7 +390,7 @@ source 对发送消息的窗口对象的引用
 window.addEventListener("message", receiveMessage, false);
 ```
 
-## 6. **前端语言特性**
+## **6. 前端语言特性**
 
 ### **6.1 $.proxy**
 
