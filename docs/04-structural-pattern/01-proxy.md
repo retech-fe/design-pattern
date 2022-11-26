@@ -575,7 +575,7 @@ function initData (vm: Component) {
 }
 ```
 
-### **7.2 vue2和vue3数据响应式化**
+### **7.2 vue2和vue3数据响应式**
 
 现在的很多前端框架或者状态管理框架都使用 `Object.defineProperty` 和 `Proxy` 来实现数据的响应式化，比如 Vue、Mobx、AvalonJS 等，Vue 2.x 与 AvalonJS 使用前者，而 Vue 3.x 与 Mobx 5.x 使用后者。
 
