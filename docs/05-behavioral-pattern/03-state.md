@@ -57,7 +57,7 @@ last_update:
 
 #### 4.1.1 大多人的写法
 
-```JavaScript
+```js
 class Battery{
     constructor() {
         this.amount='high';
@@ -90,7 +90,7 @@ battery.show();
 
 #### 4.1.2 优化一
 
-```JavaScript
+```js
 class SuccessState{
     show(){console.log('绿色');}
 }
@@ -131,7 +131,7 @@ battery.show();
 
 #### 4.1.3 优化二
 
-```JavaScript
+```js
 
 class SuccessState {
   constructor(private battery: Battery) { }
@@ -265,7 +265,7 @@ blueState.employ(trafficLight)    // 输出： 交通灯颜色变为 蓝色，�
 
 这里提供一个状态类的实现，同时引入状态的切换逻辑：
 
-```JS
+```js
 /* 抽象状态类 */
 class AbstractState {
   constructor() {
@@ -369,7 +369,7 @@ trafficLight.changeState();   // 输出：交通灯颜色变为 绿色，可以�
 ```
 如果我们要增加新的交通灯颜色，也是很方便的：
 
-```JS
+```js
 // 接上面
 
 /* 交通灯类-蓝灯 */
@@ -401,7 +401,7 @@ trafficLight.employ(blueState);    // 输出：交通灯颜色变为 蓝色，�
 
 ### 5.1 Promise
 
-```javascript
+```js
 class Promise {
   constructor(fn) {
     this.state = "initial" //先维护一下初始状态
@@ -445,7 +445,7 @@ p.then(
 
 ### 5.2 React导航
 
-```javascript
+```js
 import { Button } from 'antd';
 import { useState } from 'react';
 
