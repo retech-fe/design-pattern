@@ -12,6 +12,8 @@ last_update:
 
 当程序需要根据不同的外部情况来做出不同操作时，最直接的方法就是使用 `switch-case` 或 `if-else` 语句将这些可能发生的情况全部兼顾到，但是这种做法应付复杂一点的状态判断时就有点力不从心，开发者得找到合适的位置添加或修改代码，这个过程很容易出错，这时引入状态模式可以某种程度上缓解这个问题。
 
+简单地说就是：
+
 + 对象有自己的状态
 + 不同状态下执行的逻辑不一样
 + 用来减少if...else子句
@@ -41,7 +43,7 @@ last_update:
 ![](https://raw.githubusercontent.com/retech-fe/image-hosting/main/img/2022/10/02/09-22-35-7f770bd51b24602ef1edc008777f615d-1358693242_5100-6e40df.jpeg)
 
 
-在状态模式结构图中包含如下几个角色：
+### 在状态模式结构图中包含如下几个角色：
 
 +  Context（环境类）：环境类又称为上下文类，它是拥有多种状态的对象。由于环境类的状态存在多样性且在不同状态下对象的行为有所不同，因此将状态独立出去形成单独的状态类。在环境类中维护一个抽象状态类 State 的实例，这个实例定义当前状态，在具体实现时，它是一个 State 子类的对象。
 
@@ -49,11 +51,13 @@ last_update:
 
 + ConcreteState（具体状态类）：它是抽象状态类的子类，每一个子类实现一个与环境类的一个状态相关的行为，每一个具体状态类对应环境的一个具体状态，不同的具体状态类其行为有所不同。
 
-## 4. 代码实现
+## 4. 案例
+
+### 4.1 手机电池
 
 ![](https://raw.githubusercontent.com/retech-fe/image-hosting/main/img/2022/10/02/09-29-38-db32dc098e87db4649fa6427f54b559a-8aea4fca-62b1-4c5b-b41d-cad2211a2cbe-6d0823.png)
 
-### 4.1 大多人的写法
+#### 4.1.1 大多人的写法
 
 ```JavaScript
 class Battery{
@@ -86,7 +90,7 @@ battery.show();
 - 过多的 if/else 让代码不可维护
 
 
-### 4.2 优化一
+#### 4.1.2 优化一
 
 ```JavaScript
 class SuccessState{
@@ -127,7 +131,7 @@ battery.show();
 battery.show();
 ```
 
-### 4.3 优化二
+#### 4.1.3 优化二
 
 ```JavaScript
 
@@ -182,7 +186,217 @@ battery.show()
 
 ```
 
-## 5. 应用场景
+### 4.2 交通灯
+
+使用 JavaScript 来将上面的交通灯例子实现一下。
+
+如果通过 if-else 或 switch-case 来区分不同状态的处理逻辑，会存在这样的问题：在添加新的状态时，比如增加了 蓝灯、紫灯 等颜色及其处理逻辑的时候，需要到每个状态里找到相应的地方修改。业务处理逻辑越复杂，找到要修改的状态就不容易，特别是如果是别人的代码，或者接手遗留项目时，需要看完这个 if-else 的分支处理逻辑，新增或修改分支逻辑的过程中也很容易引入 Bug。
+
+因此我们可以把每种状态和对应的处理逻辑封装在一起，放到一个状态类中：
+
+```js
+/* 抽象状态类 */
+class AbstractState {
+  constructor() {
+    if (new.target === AbstractState) {
+      throw new Error('抽象类不能直接实例化!');
+    }
+  }
+
+  /* 抽象方法 */
+  employ() {
+    throw new Error('抽象方法不能调用!');
+  }
+}
+
+/* 交通灯状态类 */
+class State extends AbstractState {
+  constructor(name, desc) {
+    super();
+    this.color = { name, desc };
+  }
+
+  /* 覆盖抽象方法 */
+  employ(trafficLight) {
+    console.log('交通灯颜色变为 ' + this.color.name + '，' + this.color.desc);
+    trafficLight.setState(this);
+  }
+}
+
+/* 交通灯类 */
+class TrafficLight {
+  constructor() {
+    this.state = null;
+  }
+
+  /* 获取交通灯状态 */
+  getState() {
+    return this.state;
+  }
+
+  /* 设置交通灯状态 */
+  setState(state) {
+    this.state = state;
+  }
+}
+
+const trafficLight = new TrafficLight();
+
+const greenState = new State('绿色', '可以通行');
+const yellowState = new State('黄色', '大家等一等');
+const redState = new State('红色', '都给我停下来');
+
+greenState.employ(trafficLight);  // 输出： 交通灯颜色变为 绿色，可以通行
+yellowState.employ(trafficLight); // 输出： 交通灯颜色变为 黄色，大家等一等
+redState.employ(trafficLight);    // 输出： 交通灯颜色变为 红色，都给我停下来
+```
+
+这里的不同状态是同一个类的类实例，比如 redState 这个类实例，就把所有红灯状态处理的逻辑封装起来，如果要把状态切换为红灯状态，那么只需要 redState.employ() 把交通灯的状态切换为红色，并且把交通灯对应的行为逻辑也切换为红灯状态。
+
+如果要新建状态，不用修改原有代码，只要加上下面的代码：
+
+```js
+// 接上面
+
+const blueState = new State('蓝色', '这是要干啥')
+
+blueState.employ(trafficLight)    // 输出： 交通灯颜色变为 蓝色，这是要干啥
+```
+
+传统的状态区分一般是基于状态类扩展的不同状态类，如何实现看需求具体了，比如逻辑比较复杂，通过新建状态实例的方法已经不能满足需求，那么可以使用状态类的方式。
+
+这里提供一个状态类的实现，同时引入状态的切换逻辑：
+
+```JS
+/* 抽象状态类 */
+class AbstractState {
+  constructor() {
+    if (new.target === AbstractState) {
+      throw new Error('抽象类不能直接实例化!');
+    }
+  }
+
+  /* 抽象方法 */
+  employ() {
+    throw new Error('抽象方法不能调用!');
+  }
+
+  changeState() {
+    throw new Error('抽象方法不能调用!');
+  }
+}
+
+/* 交通灯类-绿灯 */
+class GreenState extends AbstractState {
+  constructor() {
+    super();
+    this.colorState = '绿色';
+  }
+
+  /* 覆盖抽象方法 */
+  employ() {
+    console.log('交通灯颜色变为 ' + this.colorState + '，可以通行');
+    // 省略业务相关操作
+  }
+
+  changeState(trafficLight) {
+    trafficLight.setState(trafficLight.yellowState);
+  }
+}
+
+/* 交通灯类-黄灯 */
+class YellowState extends AbstractState {
+  constructor() {
+    super();
+    this.colorState = '黄色';
+  }
+
+  /* 覆盖抽象方法 */
+  employ() {
+    console.log('交通灯颜色变为 ' + this.colorState + '，大家等一等');
+    // 省略业务相关操作
+  }
+
+  changeState(trafficLight) {
+    trafficLight.setState(trafficLight.redState);
+  }
+}
+
+/* 交通灯类-红灯 */
+class RedState extends AbstractState {
+  constructor() {
+    super();
+    this.colorState = '红色';
+  }
+
+  /* 覆盖抽象方法 */
+  employ() {
+    console.log('交通灯颜色变为 ' + this.colorState + '，都给我停下来');
+    // 省略业务相关操作
+  }
+
+  changeState(trafficLight) {
+    trafficLight.setState(trafficLight.greenState);
+  }
+}
+
+/* 交通灯类 */
+class TrafficLight {
+  constructor() {
+    this.greenState = new GreenState();
+    this.yellowState = new YellowState();
+    this.redState = new RedState();
+
+    this.state = this.greenState;
+  }
+
+  /* 设置交通灯状态 */
+  setState(state) {
+    state.employ(this);
+    this.state = state;
+  }
+
+  changeState() {
+    this.state.changeState(this);
+  }
+}
+
+
+const trafficLight = new TrafficLight();
+
+trafficLight.changeState();   // 输出：交通灯颜色变为 黄色，大家等一等
+trafficLight.changeState();   // 输出：交通灯颜色变为 红色，都给我停下来
+trafficLight.changeState();   // 输出：交通灯颜色变为 绿色，可以通行
+
+```
+如果我们要增加新的交通灯颜色，也是很方便的：
+
+```JS
+// 接上面
+
+/* 交通灯类-蓝灯 */
+class BlueState extends AbstractState {
+  constructor() {
+    super();
+    this.colorState = '蓝色';
+  }
+
+  /* 覆盖抽象方法 */
+  employ() {
+    console.log('交通灯颜色变为 ' + this.colorState + '，这是要干啥');
+    const redDom = document.getElementById('color-blue');
+    redDom.click();
+  }
+}
+
+const blueState = new BlueState();
+
+trafficLight.employ(blueState);    // 输出：交通灯颜色变为 蓝色，这是要干啥
+```
+
+对原来的代码没有修改，非常符合开闭原则了。
+
+## 5. 场景
 
 - 操作中含有庞大的多分支的条件语句，且这些分支依赖于该对象的状态，那么可以使用状态模式来将分支的处理分散到单独的状态类中；
 - 对象的行为随着状态的改变而改变，那么可以考虑状态模式，来把状态和行为分离，虽然分离了，但是状态和行为是对应的，再通过改变状态调用状态对应的行为；
@@ -339,13 +553,13 @@ fsm.freeze()
 ```
 ## 6. 状态模式的优缺点
 
-### 6.1 状态模式的优点：
+### 6.1 优点
 
 - 结构相比之下清晰，避免了过多的 switch-case 或 if-else 语句的使用，避免了程序的复杂性提高系统的可维护性;
 - 符合开闭原则，每个状态都是一个子类，增加状态只需增加新的状态类即可，修改状态也只需修改对应状态类就可以了；
 - 封装性良好，状态的切换在类的内部实现，外部的调用无需知道类内部如何实现状态和行为的变换。
 
-### 6.2 状态模式的缺点：
+### 6.2 缺点
 - 引入了多余的类，每个状态都有对应的类，导致系统中类的个数增加。
 
 ## 7. 其他相关模式
