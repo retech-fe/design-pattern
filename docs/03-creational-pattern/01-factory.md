@@ -25,7 +25,6 @@ last_update:
 
 工厂模式分为简单工厂模式、工厂方法模式、抽象工厂模式。
 
-
 ## **4. 简单工厂模式**
 
 简单工厂模式是由一个工厂对象决定创建出哪一种产品类的实例 
@@ -93,7 +92,6 @@ console.log(Café.order('Americano'));
 console.log(Café.order('Latte'));
 console.log(Café.order('Cappuccino'));
  ```
-
 
 ### **4.2 前端应用场景 **
 
