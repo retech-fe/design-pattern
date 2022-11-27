@@ -18,11 +18,14 @@ sidebar_position: 1
 2. 能用代码实现；如果模式的代码都没有实现过，是用不出来的；即所谓，看得懂，不会用；
 3. 灵活应用到工作中的项目中；
    
-+ 看懂UML类图和时序图
-  + 从一个示例开始
-  + 类之间的关系
-  + 时序图
-  + 附录
++ 前置知识
+  + SOLID五大设计原则
+    + 单一职责原则
+    + [开放封闭原则](/docs/pre-knowledge/五大设计原则/design-rule-ocp)
+    + [里式替换原则](/docs/pre-knowledge/五大设计原则/disign-rule-liskov)
+    + 接口隔离原则
+    + [依赖倒置原则](/docs/pre-knowledge/五大设计原则/design-rule-dip)
+  + [迪米特法则](/docs/pre-knowledge/design-rule-lod)
 
 + 创建型模式
   + [简单工厂模式(Simple Factory Pattern)](/docs/creational-pattern/factory)
@@ -33,17 +36,24 @@ sidebar_position: 1
   + 原型模式
  
 + 结构型模式
-  + 适配器模式
-  + 桥接模式
-  + 装饰模式
-  + 外观模式
+  + [代理模式](/docs/structural-pattern/proxy)
   + 享元模式
-  + 代理模式
+  + 适配器模式
+  + 装饰者模式
+  + 外观模式
+  + 组合模式
+  + 桥接模式
   
 + 行为型模式
-  + 命令模式
-  + 中介者模式
   + 观察者模式
-  + 状态模式
-  + 策略模式
+  + 迭代器模式
+  + [状态模式](/design-pattern/docs/behavioral-pattern/state)
+  + [策略模式](/design-pattern/docs/behavioral-pattern/strategy)
+  + 模板方法模式
+  + 命令模式
+  + 职责链模式
+  + 中介者模式
+  + 备忘录模式
+  + 访问者模式
+  + 解释器模式
 
